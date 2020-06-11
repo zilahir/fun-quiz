@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+@import "../../styles/mixiins/paragraph";
+
+.quizRoot {
+	width: 100%;
+	height: 100vh;
+	background: rgba($color: $gray-4, $alpha: 1.0);
+
+	.oneQuestion {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		h1 {
+			@include paragraph(70px, $sf-orange);
+			font-weight: 500;
+			padding-bottom: 100px;
+			padding: 20px;
+		}
+
+		.btnList {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			width: 60%;
+		}
+	}
+}
