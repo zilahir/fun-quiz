@@ -28,6 +28,7 @@ export const Quiz: React.FunctionComponent<QuizProps> = ({
 	function goToNextQuestion() {
 		setCurrentQuestion(curr => curr + 1)
 	}
+	console.debug('currentQuestion', currQuestion, quiz.length)
 	return (
 	<div className={styles.quizRoot}>
 		{
@@ -55,6 +56,17 @@ export const Quiz: React.FunctionComponent<QuizProps> = ({
 					</div>
 				) : undefined
 			))
+		}
+		{
+			currQuestion === quiz.length ?
+				(
+					<div className={styles.overContainer}>
+						<h1>
+							This was a f***ng cool example, wasn't it?
+						</h1>
+					</div>
+				)
+				: undefined
 		}
 	</div>
 	)
